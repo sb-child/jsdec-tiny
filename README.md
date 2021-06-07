@@ -15,10 +15,12 @@ a tiny version for https://github.com/liulihaocai/JSDec/ | jsdec 缩小版
 + windows用户:
   ```cmd
     cd build
-    main.exe <要解密的js的base64>
+    main.exe
+    (输入要解密的js的base64或使用管道)
   ```
 + linux用户:
   ```bash
     cd build
-    ./main <要解密的js的base64>
+    ./main
+    (输入要解密的js的base64或使用管道)
   ```

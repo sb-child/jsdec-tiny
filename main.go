@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"encoding/base64"
 	"fmt"
 	"io/ioutil"
@@ -11,11 +12,11 @@ import (
 )
 
 func main() {
-	if len(os.Args) == 1 {
-		fmt.Println("error: 需要参数")
-		panic("need more args")
+	reader := bufio.NewReaderSize(os.Stdin, 40960)
+	inp, err := reader.ReadString('\n')
+	if err != nil {
+		fmt.Println("error: 无法从stdin读取: ", err)
 	}
-	inp := os.Args[1]
 	inp = strings.ReplaceAll(inp, "\n", "")
 	out, err := base64.StdEncoding.DecodeString(inp)
 	outStr := string(out)
