@@ -13,7 +13,7 @@ import (
 func main() {
 	if len(os.Args) == 1 {
 		fmt.Println("error: 需要参数")
-		return
+		panic("need more args")
 	}
 	inp := os.Args[1]
 	inp = strings.ReplaceAll(inp, "\n", "")
