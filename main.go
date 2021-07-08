@@ -4,11 +4,9 @@ import (
 	"bufio"
 	"encoding/base64"
 	"fmt"
-	"io/ioutil"
+	jt "jsdec_tiny"
 	"os"
 	"strings"
-
-	"github.com/robertkrimen/otto"
 )
 
 func main() {
@@ -24,28 +22,21 @@ func main() {
 		fmt.Println("error: base64解码失败")
 		panic(err)
 	}
-	file, err := os.Open("dec.js")
+	jsdec := jt.Jsdec{}
+	err = jsdec.ModInit()
 	if err != nil {
 		fmt.Println("error: 无法打开 dec.js")
 		panic(err)
 	}
-	defer file.Close()
-	fileByte, err := ioutil.ReadAll(file)
-	if err != nil {
-		fmt.Println("error: 无法读取 dec.js")
-		panic(err)
-	}
-	fileString := string(fileByte)
-	vm := otto.New()
-	_, err = vm.Run(fileString)
+	err = jsdec.LoadJS()
 	if err != nil {
 		fmt.Printf("error: 加载 dec.js 时出错: %s", err.Error())
 		panic(err)
 	}
-	ret, err := vm.Call("autoscan", nil, outStr)
+	ret, err := jsdec.Decrypt(outStr)
 	if err != nil {
 		fmt.Printf("error: 解密时出错: %s", err.Error())
 		panic(err)
 	}
-	print(ret.String())
+	print(ret)
 }
