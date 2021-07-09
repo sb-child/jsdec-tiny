@@ -1,4 +1,8 @@
 github.com/robertkrimen/otto v0.0.0-20210614181706-373ff5438452 h1:ewTtJ72GFy2e0e8uyiDwMG3pKCS5mBh+hdSTYsPKEP8=
 github.com/robertkrimen/otto v0.0.0-20210614181706-373ff5438452/go.mod h1:xvqspoSXJTIpemEonrMDFq6XzwHYYgToXWj5eRX1OtY=
+github.com/sb-child/jsdec-tiny-mod v0.0.0-20210708191126-bc0fe7b10260 h1:o8urXNAGEcDciVlA432e3/HRjTD2qZA5Tm4540DlUyg=
+github.com/sb-child/jsdec-tiny-mod v0.0.0-20210708191126-bc0fe7b10260/go.mod h1:4zVyq+4ncAS7FzTyHQcDRN99BIzmO6kg8ptrTkTFROI=
+github.com/sb-child/jsdec-tiny-mod v0.0.0-20210708200708-b65347a871ad h1:dmqaHp4eh5s1HETio5xCHZmJW+b+Bm8dZdKnEWuN3wE=
+github.com/sb-child/jsdec-tiny-mod v0.0.0-20210708200708-b65347a871ad/go.mod h1:4zVyq+4ncAS7FzTyHQcDRN99BIzmO6kg8ptrTkTFROI=
 gopkg.in/sourcemap.v1 v1.0.5 h1:inv58fC9f9J3TK2Y2R1NPntXEn3/wjWHkonhIUODNTI=
 gopkg.in/sourcemap.v1 v1.0.5/go.mod h1:2RlvNNSMglmRrcvhfuzp4hQHwOtjxlbjX7UPY/GXb78=

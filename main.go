@@ -4,9 +4,10 @@ import (
 	"bufio"
 	"encoding/base64"
 	"fmt"
-	jt "jsdec_tiny"
 	"os"
 	"strings"
+
+	jt "github.com/sb-child/jsdec-tiny-mod"
 )
 
 func main() {
