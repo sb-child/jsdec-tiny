@@ -14,7 +14,7 @@ import jt "github.com/sb-child/jsdec-tiny-mod"
 ```go
 jsdec := jt.Jsdec{}
 err := jsdec.ModInit()
-# ...
+// ...
 ```
 
 ### 编译成命令行工具
