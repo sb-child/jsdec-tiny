@@ -1,7 +1,23 @@
 # jsdec-tiny
 a tiny version for https://github.com/liulihaocai/JSDec/ | jsdec 缩小版
 ## 如何使用
-### 编译
+### 在golang项目中使用
+在你的项目下运行命令
+```bash
+go get -v -u -t github.com/sb-child/jsdec-tiny-mod@latest
+```
+然后在go代码中导入
+```go
+import jt "github.com/sb-child/jsdec-tiny-mod"
+```
+即可使用
+```go
+jsdec := jt.Jsdec{}
+err := jsdec.ModInit()
+# ...
+```
+
+### 编译成命令行工具
 <需要事先安装`golang`>  
 + windows用户:
   ```bash
@@ -11,7 +27,7 @@ a tiny version for https://github.com/liulihaocai/JSDec/ | jsdec 缩小版
   ```bash
     ./build.sh
   ```
-### 运行
+#### 运行
 + windows用户:
   ```cmd
     cd build
